@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="header">Html collection</h1>
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ul>
+    <div class="htmlcollection">
+        <li class="listitems">a</li>
+        <li class="listitems">b</li>
+        <li class="listitems">c</li>
+        <li class="listitems">d</li>
+    </div>
+    
+</body>
+<script>
+  let unorderedlist=  document.querySelector('ul');
+//   Nodelist
+  let listitems=document.querySelectorAll("li")
+  console.log(listitems) /* gives nodelist in the console by selecting all list using queryselector all*/
+//   listitems.forEach(function(list){
+//     // list.innerHTML="hello"; /all listitems changes to hello
+    
+// })
+// listitems.innerHTML="two changed" /*this won't work we have to use like below */
+listitems[1].innerHTML="two changed" /* this will work for nodelist */
+
+// htmlcollection
+let listitemsSelected=document.getElementsByClassName(".listitems")
+console.log(listitemsSelected);
+// htmlcollection doesnthave loop properties so we have to convert it into array
+letconvertedArray=Array.from(listitemsSelected);
+
+
+</script>
+</html>
