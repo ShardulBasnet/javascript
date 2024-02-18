@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li> apple</li>
+    </ul>
+    
+</body>
+<script>
+
+//   function addelements(fruitsName){
+//        let ul=  document.querySelector('ul');
+//     let li =document.createElement('li');
+//     li.innerHTML=fruitsName;
+//    ul.appendChild(li);
+
+
+//    }
+//    addelements("mango");
+//    addelements("orange");
+
+//  this one is the more optimize way,since using innerhtml traverse more
+function addelements(fruitsName){
+    let li = document.createElement('li');
+    let ul = document.querySelector("ul")
+    li.appendChild(document.createTextNode(fruitsName));
+    ul.appendChild(li);
+    
+}
+addelements("mango")
+addelements("orange")
+
+</script>
+</html>
