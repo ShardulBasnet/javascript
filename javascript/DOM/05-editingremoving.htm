@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <li>oats</li>
+    <li>chana</li>
+    <li>chicken</li>
+    <li>brocoli</li>
+    
+</body>
+<script>
+
+    // Editing the element 
+    // first method
+    let oats =document.querySelector("li:nth-child(1)")
+    oats.innerHTML="museli" /*oats changes into muesli */
+
+// second method
+let brocoli=document.querySelector("li:nth-child(4)")
+brocoli.outerHTML=`<li> Paneer </li>` /* brocoli changes into paneer */
+
+// third method
+
+let chicken=document.querySelector('li:nth-child(3)')
+let newitem=document.createElement('li');
+newitem.innerHTML="mutton"
+chicken.replaceWith(newitem);
+
+// Removing the element
+let removeElement = document.querySelector("li:nth-child(4)");
+removeElement.remove();
+    
+// Adding the element
+
+let newElement = document.createElement("li");
+newElement.innerHTML="newly added";
+document.body.appendChild(newElement);
+</script>
+</html>
