@@ -3,17 +3,7 @@ let body=document.querySelector("body")
         buttons.forEach(val => {
 val.addEventListener('click',function(e){
 console.log(e.target.id)
-if(e.target.id==='green'){
-    body.style.backgroundColor='green'; /* or e.target.id instead of green*/
-}
-if(e.target.id==="blue"){
-    body.style.backgroundColor=e.target.id;
-}
-if(e.target.id==="red"){
-    body.style.backgroundColor=e.target.id;
-}
-if(e.target.id==="yellow"){
-    body.style.backgroundColor=e.target.id;
-}
+body.style.backgroundColor=e.target.id;
+
 })
    });
