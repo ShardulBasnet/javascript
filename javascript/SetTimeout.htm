@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id ="start"> start</button>
+    <h1> this is starting</h1>
+    <button id ="stop"> stop</button>
+    
+    <script>
+        let starts=document.querySelector('#start')
+        let stops=document.querySelector('#stop')
+        
+        starts.addEventListener('click',function(){
+            const timeout=function(){
+                document.querySelector("h1").innerHTML="its because of settimeout"
+            }
+           shardul=  setTimeout(timeout,3000) /*timeout is used as reference */
+        })
+        stops.addEventListener('click',function(){
+            clearTimeout(shardul)
+        })
+        
+    </script>
+        </body>
+</html>
