@@ -19,5 +19,9 @@ let stopcolor=function(){
     clearInterval(intervalId)
     
 }
+let initialcolor=function(){
+    document.body.style.backgroundColor = randomColor()
+}
+document.addEventListener('DOMContentLoaded', initialcolor);
 document.querySelector("#changecolor").addEventListener('click',startchangingcolor)
 document.querySelector("#stopcolor").addEventListener('click',stopcolor)
