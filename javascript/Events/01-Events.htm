@@ -1,0 +1,32 @@
+<!-- /* generating a random background on click using rgb */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="clickme">click me</button>
+    
+</body>
+<script>
+let random = function (num) {
+
+    return Math.floor(Math.random() * num + 1);
+
+    // let randomun=Math.floor(Math.random() * num + 1); if we had 
+    // done this would have logged undefined value on the random function
+    // i.e it would look like rgb(undefined,undefined,undefined)
+
+}
+
+let button = document.querySelector(".clickme")
+button.addEventListener('click', function () {
+    let randomcolor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    document.body.style.backgroundColor = randomcolor;
+})
+
+</script>
+</html>
