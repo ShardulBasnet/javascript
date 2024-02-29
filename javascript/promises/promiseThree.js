@@ -10,6 +10,7 @@ else{
 
     },1000)
 })
+// consuming the promises
 promiseThree.then(function(user){
     return user.username
 }).then (function(username){
